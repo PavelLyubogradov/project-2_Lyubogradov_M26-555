@@ -1,0 +1,39 @@
+[project]
+name = "project-2-lyubogradov-m26-555"
+version = "0.1.0"
+description = "A primitive database: a console application for managing tables and data in JSON files."
+readme = "README.md"
+authors = [
+    { name = "p", email = "lyubogradov@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "prettytable>=3.18.0",
+    "prompt>=0.4.1",
+    "requests>=2.34.2",
+]
+
+[project.scripts]
+project = "primitive_db.main:main"
+database = "primitive_db.main:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.14.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "ruff>=0.17.1",
+]
+
+[tool.uv.build-backend]
+module-name = "primitive_db"
+
+[tool.ruff]
+line-length = 88
+target-version = "py312"
+exclude = ["venv", ".venv", "dist", "__pycache__"]
+
+[tool.ruff.lint]
+select = ["E", "F", "I"]
+ignore = [] 

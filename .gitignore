@@ -1,0 +1,9 @@
+.venv
+ dist/
+ __pycache__/
+ *.egg-info
+.ruff_cache/
+
+ # Database data created during application operation
+ db_meta.json
+data/
